@@ -1,0 +1,572 @@
+ADITYA UNIVERSITY COMPITITIVE PROGRAMMING
+
+DAY1 MONDAY 09-06-2025
+SESSION1:
+APP INSTALLATIONS:
+Note: 
+1. Prefer installing the installer files (.msi)
+2. Once the installer file is downloaded, cut and paste it in the respective folder inside the software folder in C drive.
+3. Then double click the installer and install the app/software
+
+Create 2 folders named:
+"software" in C drive
+"learning" in D/E/C drive
+
+Inside the software folder creates the folders named:
+notepad_pp
+vs_code
+eclipse
+git
+jdk
+intellij
+
+1. Notepad++:	For making quick notes
+G Search: Download notepad++
+Link: https://notepad-plus-plus.org/downloads/v8.7.7/
+
+2. vs code
+G Search: Download vs code
+Link: https://code.visualstudio.com/download
+
+3. Eclipse
+G Search: Download eclipse
+From the link: https://www.eclipse.org/downloads/
+Click on download packages
+Link: https://www.eclipse.org/downloads/packages/
+Download: Eclipse IDE for Enterprise Java and Web Developers (Select the OS)
+
+4. git
+G search: Download git
+Link: https://git-scm.com/downloads
+Click on the OS running on your system
+
+5. JDK
+G Search: Download JDK 17
+Link: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+Click on: Windows x64 Installer	153.92 MB
+
+GITHUB:
+1. Create Git Account and Login
+2. Create a new Repo for our training
+	Click on the + symbol on top, now click create new repo
+	In the new page, enter the repo name
+	Enter a suitable note/description for the repo
+	Keep the Repo public
+	Select the check box add readme file
+	Now click on the create repository (green color) button
+3. Create Personal Access Token (PAT)
+	Click on profile icon (Top right corner)
+	Click settings
+	In new windown scroll down and on left, click developer settings
+	In new window, on top right, click personal access tokens, select Tokens classic
+	In new window, click generate new token, select generate new token classic
+	In window, add suitable note
+	Click Expiration, selecty No expiry
+	Under Scope, select only the 1st (top most) check box named "Repo"
+	Now fully scroll down and click Generate PAT
+	Now Copy the PAT (Click the copy button)
+	Now mail the PAT to yourself (confidentiality) [Use the mail subject as "git pat"]
+4. Configuration commands (To link our git account on the system we working)
+	$ git config --global user.name "USERNAME"
+	
+	$ git config --global user.email "EMAIL"
+
+TRAINER REPO LINK:
+https://github.com/neelmyna/java_dsa
+
+To Download/Clone/Copy the TRAINER REPO. Use the command:
+$ git clone https://github.com/neelmyna/java_dsa
+
+SESSION2:
+To Copy A Repo into our system (Laptop):
+$ git clone Repo_Link
+$ git clone https://github.com/neelmyna/java_dsa
+
+The above command copies the given Repo into out computer. The Copy of the Repo in the Server (github) can be called as Remote Repo and the copy of the Repo in our computer can be called as Local Repo.
+
+Template:
+$ git clone https://<PAT>@Repo_Link
+
+Example:
+$ git clone https://hefbkljwhfgklerhkjgvfhefkjvbdkfjb@github.com/neelmyna/java_dsa
+
+The above command in which we have cloned a Repo using PAT is to do the Push commands without having to authenticate everytime.
+
+To Push content into the Remote Repo (server). That is to copy the content from Local Repo (from computer) to Remote Repo, the commands are:
+
+Steps and Commands:
+1st ask the git to list down all the files that need to be pushed (uploaded)
+
+$ git add path
+$ git add C:/learning/java_dsa
+$ git add .
+
+2nd Step: Ask the git to create a secured object in which all the files to be pushed are copied.
+
+$ git commit -m "java dsa notes added"
+
+3rd Step: Push (upload) 
+$ git push origin main
+$ git push (Always pushes to main branch)
+
+To check the status of the repo
+$ git status
+-----------------------------
+To create a new project in eclipse:
+
+File -> New -> Project -> Java Project
+In the Dialogue box (new window)
+De-select the module.java check box
+Enter project name ("practice") and Click Finish
+
+Now in the explorer, expand the project folder
+Now Right Click src folder -> create -> new -> package
+Give the package name "day1"
+
+Right Click "day1" in explorer (under src), create -> new -> class
+Class name "HelloWorld"
+
+primitive types in Java:
+Numeric:
+	number only
+		byte
+		short
+		int 
+		long
+	number with precision/accuracy
+		float
+		double
+char
+boolean
+
+ARITHMETIC OPERATORS:
++ - * / %
+
+All the operators take 2 operands/input
+Hence, all are binary operators
+The expression is written using INFIX notation.
+55 + 5
+i/p are numbers
+o/p is also a number
+5 + 8 / 9
+The division must be evaluated 1st. Boadmas rule
+3 + 5 - 9
+All Arithmetic operators have Left to Right Associtivity.
+The Infix expression is what we users use. But it will be 1st converted to postfix expression and only then it is evaluated.
+
+int num = 45;
+00000000 00000000 00000000 00101101
+00101101
+
+int num = -45;
+
+00101101
+11010010
+11010011
+-1*2(7) + 1 * 2(6) + 1 * 2(4) + 3
+-128 + 64 + 16 + 3
+= -64 + 19
+= -45
+
+float num = 5.5;
+
+sum = 55 + (-50) + 5.5
+sum = 5 + 5.5
+When the expression has operands of different types, then the lower sized DT value is converted to a value of higher sized DT, and only then the expression is solved. This is because the data must not be lost (decimal part of the number)
+----------------------------------
+DAY2 11-06-2025 WEDNESDAY
+Java languages basics
+
+Relational Operators:
+> < >= <= != ==
+
+I/P are numbers
+O/P is boolean
+All are binary operators
+Used with Infix notation
+Has lesser precedence than Arithmetic operators
+Has higher precedence than logical operators
+
+for i from 1 to n do:
+for(int i = 1; i <= n; i++)
+for(int i = 1; i < n+1; i++)
+
+for(int i = 1; i <= 20; i++)
+for(int i = 1; i < 21;  i++)
+
+[10, 40]	closed interval 10 to 40
+(20, 30)	open interval 21 to 29
+[35, 65)	Right Open 35 to 64
+
+i = 10;
+j = 5;
+i++;
+j--;
+a[i] = b[j]
+b[j]--;
+
+i = 10;
+j = 5;
+a[++i] = b[--j]--;
+-------------------------------------
+Logical Operators:
+& && | || !
+
+I/P are boolean
+O/P is boolean
+All are binary operators expect the not operator
+Used with Infix notation
+Has lesser precedence than Arithmetic operators and relational but has higher precedence than assignment operator.
+
+The Post increment and Post decrement operators have lesser precedence than the assignment operator.
+
+The dot operator
+object.field
+Paranthesis has the highest priority.
+It is not an operators, but used to override the precedence of an operators.
+
+JAVA PROGRAM STRUCTURE:
+
+DISADVANTAGES OF C++:
+main() must be a global function.
+Global functions were allowed. Thus the solutions (apps.software) created with neither procedural nor OO.
+global variables are still allowed in C++.
+Files are loaded using macros and stored till end of the program
+pointers were always a mess to many a programmers
+The onus of creating and deleting objects in the Heap is on programmer.
+The inheritance is by default private which makes the accessing the inherited properties very difficult.
+Multiple inheritance creates a solution which is low cohesive.
+The operator overloading concept can be used to just implement anything which is unnecessary
+The compiler creates object file which is environment restricted/specific/dependent.
+Handling  runtime errors is difficult.
+Objects can be created in Stack area as well.
+Array is primitive in C++
+
+Java:
+No global functions. All are only methods. So you have strict OO solution.
+No global variables.
+signed and unsigned removed. Thus the primitive DTs are simplified.
+libraries can be loaded and used dynamically (No pre-processors)
+Pointers are abstracted and users are given references.
+All objects are created in Heap only
+Array is an object in java
+Creating object is the only job the programmer does. Object deletion is automated with the concept GRABAGE COLLECTOR.
+The inheritance is always public in Java
+There is no Multiple inheritance. All classes are always High cohesive. Thus the implementation is very easy.
+The only operator that can be overloaded is + and only for string concatination.
+The compiler creates bytecode which is environment(OS) independent.
+Handling  runtime errors is easy via exception Handling.
+The friend concept is removed. Thus no more ambiguous and complex classes.
+------------------
+public static void main(String[] args) {
+		int num1 = 10;
+		int num2;
+		num1 = 45;
+		num2 = 35;
+		System.out.println("Num1="+num1+", Num2="+num2); // Implicitly num1 and num2 are converted to strings using toString()
+		float num = 5.5; // Error 5.5 is double and num is float (implicit down cast)
+		float num = (float) 5.5;
+		int sum = num1 + num; // Error, num1+num is float but sum is int
+	}
+-------------------------------------------------------
+DAY3 FRIDAY 13-06-2025
+
+package day1;
+
+import java.util.Objects;
+
+public class Flight {
+	private int id = 111;
+	private String airline = "SpiceJet";
+	private String source = "Chennai";
+	private String destination = "Hyderabad";
+	private float fare = 3500;
+	private float duration = 1.5f;
+	
+	{
+		System.out.println("From the Instance Initializer Block");
+		System.out.println(this.id);
+		System.out.println(airline);
+		System.out.println(source);
+		System.out.println(destination);
+		System.out.println(fare);
+		System.out.println(duration);
+		System.out.println("----------------------------");
+		// Now we shall change the values
+		this.id = 1234;
+		this.airline = "Akasa";
+		this.source = "Vishakapatnam";
+		this.destination = "Srinagar";
+		this.fare = 8900;
+		this.duration = 3.5f;
+	}
+	
+	public Flight() {
+		
+	}
+
+	public Flight(int id, String airline, String source, String destination, float fare, float duration) {
+		super();
+		System.out.println("From the All Arg Cons");
+		System.out.println(this.id);
+		System.out.println(this.airline);
+		System.out.println(this.source);
+		System.out.println(this.destination);
+		System.out.println(this.fare);
+		System.out.println(this.duration);
+		System.out.println("----------------------------");
+		this.id = id;
+		this.airline = airline;
+		this.source = source;
+		this.destination = destination;
+		this.fare = fare;
+		this.duration = duration;
+	}
+
+	public String getAirline() {
+		return airline;
+	}
+
+	public void setAirline(String airline) {
+		this.airline = airline;
+	}
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public float getFare() {
+		return fare;
+	}
+
+	public void setFare(float fare) {
+		this.fare = fare;
+	}
+
+	public float getDuration() {
+		return duration;
+	}
+
+	public void setDuration(float duration) {
+		this.duration = duration;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Flight [id=" + id + ", airline=" + airline + ", source=" + source + ", destination=" + destination
+				+ ", fare=" + fare + ", duration=" + duration + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(airline, destination, duration, fare, id, source);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Flight other = (Flight) obj;
+		return Objects.equals(airline, other.airline) && Objects.equals(destination, other.destination)
+				&& Float.floatToIntBits(duration) == Float.floatToIntBits(other.duration)
+				&& Float.floatToIntBits(fare) == Float.floatToIntBits(other.fare) && id == other.id
+				&& Objects.equals(source, other.source);
+	}
+	
+	public static void main(String[] args) {
+		Flight flight2 = new Flight(1001, "AirIndia", "Bengaluru", "Delhi", 6900.5f, 3.15f);
+		System.out.println("Flight details initialized by the User");
+		System.out.println(flight2.id);
+		System.out.println(flight2.airline);
+		System.out.println(flight2.source);
+		System.out.println(flight2.destination);
+		System.out.println(flight2.fare);
+		System.out.println(flight2.duration);
+	}
+}
+----------------------------------------------------------
+When an object is created during the runtime, 1st the control goes to declarative stmt. Secondly it goes to the instance initializer block (un-named block) ifd present. Then it goes into the respective constructor.
+
+All local variables in Java are not initialized untill it is initialized by the programmer. Thus the local variables will be empty if they are not initialized. The 1st assignment to the local variables is its initializarion.
+
+Unlike the local variables, the instance variables and the static (class) variables have default values.
+byte, short, int and long instance variables have 0 as default values
+float varlable would have 0.0f
+double varlable would have 0.0
+boolean instance or static variable will have false as default value
+And if the instance or static variable is a reference type, then its default value will be null
+
+The super() in the constructor will make call to immediate parent class sonstructor. And this call happens right at PROLOGUE of the child class constructor.
+We can optionally pass args to super(). However in such a case 
+------------------------------------------------------------------------------
+1. Check if the given positive integer is a perfect square.
+
+STEPS TO SOLVE A PROBLEM:
+
+1. Understand the problem statement carefully and list the I/P data. List also the relavant information. Isolate the unwanted data or information. Ascertain what should be the O/P. Lastly, recognise the contraints.
+Outcome: You get to know the straight forward Question.
+
+2. Find a possible solution using what ever means. Trial and error method or using a spacific algorithm or formula. You may get multiple solutions as well. In such a case implement them one by one. Note that you have not even thought of programming or its concepts. Find solution mathematically.
+Outcome: We got a solution
+
+3. Write the Algorithm. Step by step procedure to solve the problem. Wehre each step is 
+finite, unambigious and simple.
+OutCome: You have a clearer solution via steps.
+
+4. Verify your solution. Using flow chart or trace the algorithm step by step (Debugging)
+OutCome: We have verified solution
+
+5. Write the Fake code if necessary (Pseudocode)
+
+6. Code it!
+
+n = 145
+145		12.05	12		144
+49		7.0		7		49
+
+math
+round()
+ciel()
+floor()
+
+Read the i/p, say N
+Using the built in logic, find the sq root of N. Store it in a variable, say PERFECT_ROOT
+Now, store the PERFECT_ROOT as integer number, say ROOT
+Now multiply ROOT with itself and check if it is equal to N
+If yes, then O/P N is PS
+If no, then O/P N is not a PS
+
+Read N
+PERFECT_ROOT = math.sqrt(N)
+ROOT = math.floor(PERFECT_ROOT)
+if ROOT * ROOT is N then
+	Print: N is PS
+else
+	Print: N is not a PS
+
+package day1;
+
+import java.util.Scanner;
+
+/*
+Read N
+PERFECT_ROOT = math.sqrt(N)
+ROOT = math.floor(PERFECT_ROOT)
+if ROOT * ROOT is N then
+	Print: N is PS
+else
+	Print: N is not a PS
+*/
+public class PerfectSquare {
+	
+	public static void main(String[] args) {
+		int inputNumber = 0;
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter a number to check if it is a Perfect Square: ");
+		inputNumber = scanner.nextInt();
+		int rootNumber = (int)Math.sqrt(inputNumber);
+		if(rootNumber * rootNumber == inputNumber) {
+			System.out.println(inputNumber + " is a Perfect Square");
+		}
+		else {
+			System.out.println(inputNumber + " is not a Perfect Square");
+		}
+	}
+}
+-----------------------------------------------------------------
+The teacher has evaluated all the exam papers of the student Sushma. Help the coordinator to write/declare the exam result depending on the average marks. The coordinator gets the average marks from the teacher. The coordinator must check if the average score is valid or not. Any average score which is not mentioned in the below table is invalid.
+
+0  to  59		Fail
+60 to 80		Second class
+81 to 95		First class
+96 to 100		Outstanding
+
+package day1;
+
+import java.util.Scanner;
+
+public class ExamResult {
+
+	public static void main(String[] args) {
+		float averageScore = 0.0f;
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the student average score: ");
+		averageScore = scanner.nextFloat();
+		if(averageScore >= 0 && averageScore <= 59) {
+			System.out.println("Result is Fail");
+		}
+		else if(averageScore <= 80) {
+			System.out.println("Result is Second Class");
+		}
+		else if(averageScore <= 95) {
+			System.out.println("Result is First Class");
+		}
+		else if(averageScore <= 100) {
+			System.out.println("Result is Outstanding");
+		}
+		else {
+			System.out.println("Invalid Score entered");
+		}
+		scanner.close();
+	}
+}
+-------------------------------------------
+Tax Calculation Problem based on 2025 Govt Norms.
+
+Input data: name of the employee, location of the employee, designation of the employee, basic salary
+HRA 15% of basic if employee lives in cosmopolitin city, semi urban city 10%, rural 5%
+monthly bonus of 20% of basic salary
+DA of 12% on basic salary
+
+Level1:
+Calculate the monthly salary without bonus
+Calculate the monthly gross salary
+Calculate the annual gross salary
+
+Print employee details
+Print monthly gross salary
+Print annual gross salary
+Print the bonus earned for the year
+
+Level2:
+The income tax slabs are as follows:
+upto 5 lakhs: No Tax
+5,00,001 to 8,00,000 10%
+8,00,001 to 10,00,000 15%
+10,00,001 to 12,00,000 20%
+12,00,001 to 15,00,000 20%
+15,00,001 to 20,00,000 25%
+Above 20 Lakhs 30%
+
+The Charity amount under 80G can be deducted from the gross salary
+The interest paid on Home Loan of upto 1,20,000 can be claimed
+Under the section 87, if eligible can claim upto 3 lakhs.
+
+Print the taxable income
+
+Level3:
+Print employee details
+Print salary details (basic, monthly gross, annual gross, annual bonus)
+Print taxable income
+Print total standard deductions
+Print tax amount payable
