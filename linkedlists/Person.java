@@ -1,5 +1,6 @@
 package linkedlists;
 
+// creating the person class
 public class Person {
 	private int id;
 	private String name;
